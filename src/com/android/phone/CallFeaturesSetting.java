@@ -659,7 +659,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         } else if (preference == mCallRecordingFormat) {
             int value = Integer.valueOf((String) objValue);
             int index = mCallRecordingFormat.findIndexOfValue((String) objValue);
-            Settings.System.putInt(mPhone.getContext().getContentResolver(), Settings.System.CALL_RECORDING_FORMAT, value);
+            //Settings.System.putInt(mPhone.getContext().getContentResolver(), Settings.System.CALL_RECORDING_FORMAT, value);
             mCallRecordingFormat.setSummary(mCallRecordingFormat.getEntries()[index]);
          }
         // always let the preference setting proceed.
@@ -1860,8 +1860,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         mCallRecordingFormat = (ListPreference) findPreference(CALL_RECORDING_FORMAT);
         if (mCallRecordingFormat != null) {
             if (isCallRecordingEnabled()) {
-                int format = Settings.System.getInt(getContentResolver(),
-                        Settings.System.CALL_RECORDING_FORMAT, 0);
+                //int format = Settings.System.getInt(getContentResolver(),
+                //        Settings.System.CALL_RECORDING_FORMAT, 0);
                 mCallRecordingFormat.setValue(String.valueOf(format));
                 mCallRecordingFormat.setSummary(mCallRecordingFormat.getEntry());
                 mCallRecordingFormat.setOnPreferenceChangeListener(this);
