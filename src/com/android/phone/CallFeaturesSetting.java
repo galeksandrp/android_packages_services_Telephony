@@ -1862,7 +1862,7 @@ public class CallFeaturesSetting extends PreferenceActivity
             if (isCallRecordingEnabled()) {
                 //int format = Settings.System.getInt(getContentResolver(),
                 //        Settings.System.CALL_RECORDING_FORMAT, 0);
-                mCallRecordingFormat.setValue(String.valueOf(format));
+                //mCallRecordingFormat.setValue(String.valueOf(format));
                 mCallRecordingFormat.setSummary(mCallRecordingFormat.getEntry());
                 mCallRecordingFormat.setOnPreferenceChangeListener(this);
             } else {
